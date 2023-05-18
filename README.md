@@ -87,6 +87,8 @@ Kebanyakan fitur tidak memiliki korelasi yang kuat satu sama lain. Hanya beberap
 
 Untuk mempermudah melihat korelasi antara fitur dengan label, akan dibuat tabel yang telah diurutkan nilai korelasinya dari yang terbesar hingga yang terkecil.
 
+Tabel 1. Korelasi fitur dengan target
+
 | fitur         	| korelasi_dengan_price_range 	|
 |---------------	|-----------------------------	|
 | price_range   	| 1.0000                      	|
