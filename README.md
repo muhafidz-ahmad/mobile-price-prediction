@@ -2,7 +2,10 @@
 
 # Domain Proyek
 
-![smartphone](https://github.com/muhafidz-ahmad/mobile-price-prediction/assets/115754250/e6d6cd16-d9c8-4b78-92df-0f0b6e198af5)
+<p>
+  <img src="https://github.com/muhafidz-ahmad/mobile-price-prediction/assets/115754250/e6d6cd16-d9c8-4b78-92df-0f0b6e198af5" alt="ilustrasi smartphone" width="600">
+  <figcaption>Gambar 1. Ilustrasi smartphone</figcaption>
+</p>
 
 Di era modern ini, ponsel telah menjadi salah satu perangkat teknologi yang paling penting dan populer di dunia. Ponsel tidak lagi hanya digunakan sebagai alat komunikasi, tetapi juga sebagai perangkat serbaguna yang menggabungkan fungsi telepon, kamera, pemutar musik, internet, dan banyak lagi dalam satu perangkat.
 
@@ -65,21 +68,48 @@ Namun dengan menggunakan metode IQR untuk mendeteksi outliers, terdapat 18 outli
 ## Exploratory Data Analysis
 Pertama akan dibuat histogram pada kolom-kolom dengan tipe data numerik.
 
-
-![histogram semua kolom dengan tipe data numerik](https://github.com/muhafidz-ahmad/mobile-price-prediction/assets/115754250/885f6ea0-4168-485d-beec-9bed8c2321e8)
+<p>
+  <img src="https://github.com/muhafidz-ahmad/mobile-price-prediction/assets/115754250/885f6ea0-4168-485d-beec-9bed8c2321e8" alt="histogram semua kolom dengan tipe data numerik" width="600">
+  <figcaption>Gambar 2. Histogram semua kolom dengan tipe data numerik</figcaption>
+</p>
 
 * Pada histogram di atas terlihat bahwa label sudah seimbang.
 * Terdapat beberapa kolom yang hanya terdiri dari 2 nilai yang menunjukan keberadaan fitur tertentu.
 
 Selanjutnya akan dilihat korelasi antar fitur.
 
-![korelasi antar fitur](https://github.com/muhafidz-ahmad/mobile-price-prediction/assets/115754250/a54a21e6-a1c8-4043-af07-f2e36965d58b)
+<p>
+  <img src="https://github.com/muhafidz-ahmad/mobile-price-prediction/assets/115754250/a54a21e6-a1c8-4043-af07-f2e36965d58b" alt="Korelasi antar fitur" width="600">
+  <figcaption>Gambar 3. Korelasi antar fitur</figcaption>
+</p>
 
 Kebanyakan fitur tidak memiliki korelasi yang kuat satu sama lain. Hanya beberapa saja fitur yang memiliki korelasi yang cukup tinggi karena memang kedua fitur tersebut saling terkait. Seperti ukuran layar pada fitur *px_height* dan *px_width*, kemudian ketersediaan jaringan 3g dan 4g, serta resolusi kamera depan dan kamera belakang.
 
 Untuk mempermudah melihat korelasi antara fitur dengan label, akan dibuat tabel yang telah diurutkan nilai korelasinya dari yang terbesar hingga yang terkecil.
 
-![korelasi fitur dengan harga](https://github.com/muhafidz-ahmad/mobile-price-prediction/assets/115754250/06d24f88-e06a-47e3-be9c-90f323a1beeb)
+| fitur         	| korelasi_dengan_price_range 	|
+|---------------	|-----------------------------	|
+| price_range   	| 1.0000                      	|
+| ram           	| 0.9170                      	|
+| battery_power 	| 0.2007                      	|
+| px_width      	| 0.1658                      	|
+| px_height     	| 0.1489                      	|
+| int_memory    	| 0.0444                      	|
+| sc_w          	| 0.0387                      	|
+| pc            	| 0.0336                      	|
+| touch_screen  	| 0.0304                      	|
+| mobile_wt     	| 0.0303                      	|
+| three_g       	| 0.0236                      	|
+| sc_h          	| 0.0230                      	|
+| fc            	| 0.0220                      	|
+| talk_time     	| 0.0219                      	|
+| blue          	| 0.0206                      	|
+| wifi          	| 0.0187                      	|
+| dual_sim      	| 0.0174                      	|
+| four_g        	| 0.1477                      	|
+| clock_speed   	| 0.0066                      	|
+| n_cores       	| 0.0044                      	|
+| m_dep         	| 0.0009                      	|
 
 Terlihat bahwa RAM adalah fitur yang memiliki korelasi tertinggi dengan label harga ponsel.
 
@@ -93,31 +123,18 @@ Standarisasi digunakan karena kolom-kolom pada data ini tidak terdistribusi norm
 
 Karena dataset yang digunakan ini terdapat beberapa kolom yang hanya memiliki 2 nilai, yaitu 0 dan 1, kolom tersebut akan dikecualikan.
 
-```
-col_filter = info_df[info_df['max'] > 1]['nama_kolom'][1:]
-
-scaler = StandardScaler()
-scaler.fit(df3[col_filter])
-
-df4 = df3.copy()
-
-df4[col_filter] = scaler.transform(df3.loc[:, col_filter])
-```
-
 ## Feature and Target Splitting
 Tujuan dari pemisahan antara fitur dan target ini agar data dapat dimasukan ke dalam model machine learning.
-
-```
-x_train = df4.drop('price_range', axis=1)
-y_train = df4['price_range']
-```
 
 # Modelling
 Algoritma yang akan digunakan pada project ini adalah Decision Tree dan Support Vector Machine (SVM).
 
 ## Decision Tree
 
-![tree](https://github.com/muhafidz-ahmad/mobile-price-prediction/assets/115754250/e07bbc0e-4af5-4de1-8720-973e6baaf2ae)
+<p>
+  <img src="https://github.com/muhafidz-ahmad/mobile-price-prediction/assets/115754250/e07bbc0e-4af5-4de1-8720-973e6baaf2ae" alt="Ilustrasi pohon" width="600">
+  <figcaption>Gambar 4. Ilustrasi pohon</figcaption>
+</p>
 
 Kelebihan dari algoritma Decision Tree adalah kemampuannya untuk memodelkan hubungan non-linear antara atribut dan label. Selain itu, Decision Tree juga dapat dengan mudah diinterpretasikan karena keputusan diambil berdasarkan aturan yang dapat dijelaskan dengan mudah oleh manusia. Namun, kelemahan dari Decision Tree adalah kecenderungannya untuk overfitting jika tidak dikendalikan dengan baik. Oleh karena itu, kami menggunakan hyperparameter tuning untuk mencari model Decision Tree yang memiliki kinerja yang optimal dan terhindar dari overfitting.
 
@@ -127,7 +144,10 @@ Pada algoritma Decision Tree, kami melakukan hyperparameter tuning menggunakan G
 
 ## SVM
 
-![svm](https://github.com/muhafidz-ahmad/mobile-price-prediction/assets/115754250/b594785d-89ce-414e-a965-66ee36b7a035)
+<p>
+  <img src="https://github.com/muhafidz-ahmad/mobile-price-prediction/assets/115754250/b594785d-89ce-414e-a965-66ee36b7a035" alt="Ilustrasi SVM" width="600">
+  <figcaption>Gambar 5. Ilustrasi SVM</figcaption>
+</p>
 
 Kelebihan dari algoritma SVM adalah kemampuannya untuk bekerja dengan baik dalam dataset dengan dimensi tinggi dan kemampuannya untuk menangani data yang tidak linier secara efektif melalui penggunaan fungsi kernel. SVM juga cenderung lebih tahan terhadap overfitting jika parameter C diatur dengan benar. Namun, kelemahan dari SVM adalah komputasi yang memakan waktu lebih lama terutama pada dataset yang besar, dan sensitif terhadap pemilihan hyperparameter yang tepat.
 
