@@ -38,27 +38,27 @@ Dataset ini telah terbagi menjadi 2 bagian, yaitu data training dengan total 200
 
 ## Variabel-variabel pada dataset
 Masing-masing data terdiri dari 4 kolom, yaitu:
-1. *battery_power: Total energy a battery can store in one time measured in mAh*
-2. *blue: Has bluetooth or not*
-3. *clock_speed: Speed at which microprocessor executes instructions*
-4. *dual_sim: Has dual sim support or not*
-5. *fc: Front Camera mega pixels*
-6. *four_g: Has 4G or not*
-7. *int_memory: Internal Memory in Gigabytes*
-8. *m_dep: Mobile Depth in cm*
-9. *mobile_wt: Weight of mobile phone*
-10. *n_cores: Number of cores of processor*
-11. *pc: Primary Camera mega pixels*
-12. *px_height: Pixel Resolution Height*
-13. *px_width: Pixel Resolution Width*
-14. *ram: Random Access Memory in Megabytes*
-15. *sc_h: Screen Height of mobile in cm*
-16. *sc_w: Screen Width of mobile in cm*
-17. *talk_time: Time that a single battery charge will last when you are on call in minutes*
-18. *three_g: Has 3G or not*
-19. *touch_screen: Has touch screen or not*
-20. *wifi: Has wifi or not*
-21. *price_range: This is the target variable with value of 0(low cost), 1(medium cost), 2(high cost) and 3(very high cost).*
+1. *battery_power* : Kapasitas baterai dalam satuan mAh
+2. *blue* : Ketersediaan fitur *bluetooth* (1) atau tidak (0)
+3. *clock_speed* : Kecepatan processor dalam mengeksekusi instruksi
+4. *dual_sim* : Ketersediaan fitur *dual sim* (1) atau tidak (0)
+5. *fc* : Resolusi kamera depan dalam satuan MP (Mega Pixels)
+6. *four_g* : Ketersediaan jaringan 4G (1) atau tidak (0)
+7. *int_memory* : Kapasitas memori internal dalam satuan GB (Giga Bytes)
+8. *m_dep* : Kedalaman ponsel dalam cm
+9. *mobile_wt* : Berat ponsel
+10. *n_cores* : Jumlah *core processor*
+11. *pc* : Resolusi kamera utama dalam MP (Mega Pixels)
+12. *px_height* : Tinggi resolusi layar dalam satuan Pixels
+13. *px_width* : Lebar resolusi layar dalam satuan Pixels
+14. *ram* : Kapasitas RAM dalam MB (Mega Bytes)
+15. *sc_h* : Tinggi layar ponsel dalam CM (Centi Meter)
+16. *sc_w* : Lebar layar ponsel dalam CM (Centi Meter)
+17. *talk_time* : Waktu yang dibutuhkan untuk satu kali pengisian daya baterai saat Anda sedang menelepon dalam satuan menit
+18. *three_g* : Ketersediaan jaringan 3G (1) atau tidak (0)
+19. *touch_screen* : Ketersediaan fitur layar sentuh (1) atau tidak (0)
+20. *wifi* : Ketersediaan fitur wifi (1) atau tidak (0)
+21. *price_range* : Variabel target dengan nilai 0 (harga rendah), 1 (harga menengah), 2 (harga tinggi), dan 3 (harga sangat tinggi).
 
 ## Kondisi Data
 Baik data *training* maupun data *testing*, dataset ini sudah bersih dari data yang hilang maupun data duplikat.
