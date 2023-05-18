@@ -39,7 +39,7 @@ Dataset ini telah terbagi menjadi 2 bagian, yaitu data training dengan total 200
 ## Variabel-variabel pada dataset
 Masing-masing data terdiri dari 4 kolom, yaitu:
 1. *battery_power: Total energy a battery can store in one time measured in mAh*
-2. *blue: Has bluetooth or not
+2. *blue: Has bluetooth or not*
 3. *clock_speed: Speed at which microprocessor executes instructions*
 4. *dual_sim: Has dual sim support or not*
 5. *fc: Front Camera mega pixels*
