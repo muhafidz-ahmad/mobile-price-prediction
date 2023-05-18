@@ -38,27 +38,27 @@ Dataset ini telah terbagi menjadi 2 bagian, yaitu data training dengan total 200
 
 ## Variabel-variabel pada dataset
 Masing-masing data terdiri dari 4 kolom, yaitu:
-1. *battery_power* : Kapasitas baterai dalam satuan mAh
-2. *blue* : Ketersediaan fitur *bluetooth* (1) atau tidak (0)
-3. *clock_speed* : Kecepatan processor dalam mengeksekusi instruksi
-4. *dual_sim* : Ketersediaan fitur *dual sim* (1) atau tidak (0)
-5. *fc* : Resolusi kamera depan dalam satuan MP (Mega Pixels)
-6. *four_g* : Ketersediaan jaringan 4G (1) atau tidak (0)
-7. *int_memory* : Kapasitas memori internal dalam satuan GB (Giga Bytes)
-8. *m_dep* : Kedalaman ponsel dalam cm
-9. *mobile_wt* : Berat ponsel
-10. *n_cores* : Jumlah *core processor*
-11. *pc* : Resolusi kamera utama dalam MP (Mega Pixels)
-12. *px_height* : Tinggi resolusi layar dalam satuan Pixels
-13. *px_width* : Lebar resolusi layar dalam satuan Pixels
-14. *ram* : Kapasitas RAM dalam MB (Mega Bytes)
-15. *sc_h* : Tinggi layar ponsel dalam CM (Centi Meter)
-16. *sc_w* : Lebar layar ponsel dalam CM (Centi Meter)
-17. *talk_time* : Waktu yang dibutuhkan untuk satu kali pengisian daya baterai saat Anda sedang menelepon dalam satuan menit
-18. *three_g* : Ketersediaan jaringan 3G (1) atau tidak (0)
-19. *touch_screen* : Ketersediaan fitur layar sentuh (1) atau tidak (0)
-20. *wifi* : Ketersediaan fitur wifi (1) atau tidak (0)
-21. *price_range* : Variabel target dengan nilai 0 (harga rendah), 1 (harga menengah), 2 (harga tinggi), dan 3 (harga sangat tinggi).
+1. *battery_power* 	: Kapasitas baterai dalam satuan mAh
+2. *blue* 		: Ketersediaan fitur *bluetooth* (1) atau tidak (0)
+3. *clock_speed* 	: Kecepatan processor dalam mengeksekusi instruksi
+4. *dual_sim* 		: Ketersediaan fitur *dual sim* (1) atau tidak (0)
+5. *fc* 		: Resolusi kamera depan dalam satuan MP (Mega Pixels)
+6. *four_g* 		: Ketersediaan jaringan 4G (1) atau tidak (0)
+7. *int_memory* 	: Kapasitas memori internal dalam satuan GB (Giga Bytes)
+8. *m_dep* 		: Kedalaman ponsel dalam cm
+9. *mobile_wt* 		: Berat ponsel
+10. *n_cores* 		: Jumlah *core processor*
+11. *pc* 		: Resolusi kamera utama dalam MP (Mega Pixels)
+12. *px_height* 	: Tinggi resolusi layar dalam satuan Pixels
+13. *px_width* 		: Lebar resolusi layar dalam satuan Pixels
+14. *ram* 		: Kapasitas RAM dalam MB (Mega Bytes)
+15. *sc_h* 		: Tinggi layar ponsel dalam CM (Centi Meter)
+16. *sc_w* 		: Lebar layar ponsel dalam CM (Centi Meter)
+17. *talk_time* 	: Waktu yang dibutuhkan untuk satu kali pengisian daya baterai saat Anda sedang menelepon dalam satuan menit
+18. *three_g* 		: Ketersediaan jaringan 3G (1) atau tidak (0)
+19. *touch_screen* 	: Ketersediaan fitur layar sentuh (1) atau tidak (0)
+20. *wifi* 		: Ketersediaan fitur wifi (1) atau tidak (0)
+21. *price_range* 	: Variabel target dengan nilai 0 (harga rendah), 1 (harga menengah), 2 (harga tinggi), dan 3 (harga sangat tinggi).
 
 ## Kondisi Data
 Baik data *training* maupun data *testing*, dataset ini sudah bersih dari data yang hilang maupun data duplikat.
