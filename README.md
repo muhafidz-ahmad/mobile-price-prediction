@@ -139,8 +139,8 @@ Algoritma yang akan digunakan pada project ini adalah *Decision Tree* dan *Suppo
 Kelebihan dari algoritma *Decision Tree* adalah kemampuannya untuk memodelkan hubungan non-linier antara atribut dan label. Selain itu, *Decision Tree* juga dapat dengan mudah diinterpretasikan karena keputusan diambil berdasarkan aturan yang dapat dijelaskan dengan mudah oleh manusia. Namun, kelemahan dari *Decision Tree* adalah kecenderungannya untuk *overfitting* jika tidak dikendalikan dengan baik. Oleh karena itu, kami menggunakan *hyperparameter tuning* untuk mencari model *Decision Tree* yang memiliki kinerja yang optimal dan terhindar dari *overfitting*.
 
 Pada algoritma *Decision Tree*, dilakukan *hyperparameter tuning* menggunakan *Grid Search* untuk mencari *hyperparameter* terbaik. *Hyperparameter* yang diatur adalah:
-| criterion	| 'gini', 'entropy'	|
-| max_depth	| 2, 3, 4	|
+* criterion : 'gini', 'entropy'
+* max_depth : 2, 3, 4
 
 ## SVM
 
@@ -152,8 +152,8 @@ Pada algoritma *Decision Tree*, dilakukan *hyperparameter tuning* menggunakan *G
 Kelebihan dari algoritma SVM adalah kemampuannya untuk bekerja dengan baik dalam dataset dengan dimensi tinggi dan kemampuannya untuk menangani data yang tidak linier secara efektif melalui penggunaan fungsi kernel. SVM juga cenderung lebih tahan terhadap *overfitting* jika parameter C diatur dengan benar. Namun, kelemahan dari SVM adalah komputasi yang memakan waktu lebih lama terutama pada dataset yang besar, dan sensitif terhadap pemilihan *hyperparameter* yang tepat.
 
 Pada algoritma SVM, dilakukan juga *hyperparameter tuning* menggunakan *Grid Search* untuk mencari *hyperparameter* terbaik. *Hyperparameter* yang diatur adalah:
-| kernel	| 'linear', 'poly', 'rbf', 'sigmoid'	|
-| C	| 1, 3, 5	|
+* kernel : 'linear', 'poly', 'rbf', 'sigmoid'
+* C : 1, 3, 5
 
 # Evaluation
 Untuk mengevaluasi kinerja model klasifikasi harga ponsel, kami menggunakan beberapa metrik evaluasi yang umum digunakan dalam tugas klasifikasi. Metrik evaluasi yang kami gunakan adalah sebagai berikut:
@@ -164,10 +164,10 @@ Metrik ini mengukur proporsi jumlah prediksi yang benar dibandingkan dengan tota
 $$akurasi = {TP + TN \\over TP + TN + FP + FN}.$$
 
 Dimana:
-* TP (True Positive), jumlah data positif yang diklasifikasikan dengan benar.
-* TN (True Negative), jumlah data negatif yang diklasifikasikan dengan benar.
-* FP (False Positive), jumlah data negatif yang salah diklasifikasikan sebagai positif (type 1 error).
-* FN (False Negative), jumlah data positif yang salah diklasifikasikan sebagai negatif (type 2 error).
+* TP (*True Positive*), jumlah data positif yang diklasifikasikan dengan benar.
+* TN (*True Negative*), jumlah data negatif yang diklasifikasikan dengan benar.
+* FP (*False Positive*), jumlah data negatif yang salah diklasifikasikan sebagai positif (*type 1 error*).
+* FN (*False Negative*), jumlah data positif yang salah diklasifikasikan sebagai negatif (*type 2 error*).
 
 ## 2. Presisi
 Presisi mengukur seberapa baik model dalam mengidentifikasi kelas yang positif secara akurat. Dalam konteks proyek ini, presisi mengukur seberapa baik model dalam mengklasifikasikan ponsel sebagai mahal, menengah, atau murah dengan benar.
@@ -206,5 +206,7 @@ Model SVM menghasilkan akurasi yang lebih tinggi, presisi yang lebih baik, recal
 Dari hasil project ini, dapat disimpulkan bahwa model SVM dengan parameter terbaik yang ditentukan melalui Grid Search merupakan pilihan terbaik untuk klasifikasi harga ponsel dalam proyek ini. SVM mampu menangani hubungan non-linier dengan baik dan memberikan kinerja yang lebih baik dalam hal akurasi klasifikasi.
 
 # Referensi
-| [1]	| [Asim, Muhammad & Khan, Zafar. (2018). Mobile Price Class prediction using Machine Learning Techniques. International Journal of Computer Applications. 179. 6-11. 10.5120/ijca2018916555.](https://www.researchgate.net/publication/323994340_Mobile_Price_Class_prediction_using_Machine_Learning_Techniques)	|
-| [2] 	| [Ahsanul Hoque Sakib, Asif Khan Shakir, Shanjoy Sutradhar, MD.Abu Saleh, Washim Akram, and Khalid Been MD.Badruzzaman Biplop. 2022. A hybrid model for predicting Mobile Price Range using machine learning techniques. In 2022 The 8th International Conference on Computing and Data Engineering (ICCDE 2022). Association for Computing Machinery, New York, NY, USA, 86–91. https://doi.org/10.1145/3512850.3512860](https://dl.acm.org/doi/abs/10.1145/3512850.3512860)	|
+
+[1]	[Asim, Muhammad & Khan, Zafar. (2018). Mobile Price Class prediction using Machine Learning Techniques. International Journal of Computer Applications. 179. 6-11. 10.5120/ijca2018916555.](https://www.researchgate.net/publication/323994340_Mobile_Price_Class_prediction_using_Machine_Learning_Techniques)
+
+[2] 	[Ahsanul Hoque Sakib, Asif Khan Shakir, Shanjoy Sutradhar, MD.Abu Saleh, Washim Akram, and Khalid Been MD.Badruzzaman Biplop. 2022. A hybrid model for predicting Mobile Price Range using machine learning techniques. In 2022 The 8th International Conference on Computing and Data Engineering (ICCDE 2022). Association for Computing Machinery, New York, NY, USA, 86–91. https://doi.org/10.1145/3512850.3512860](https://dl.acm.org/doi/abs/10.1145/3512850.3512860)
