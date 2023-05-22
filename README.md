@@ -1,4 +1,4 @@
-# Proyek 1 MLT Dicoding - Muhafidz Ahmad Halim
+# Mobile Price Prediction
 
 # Domain Proyek
 
